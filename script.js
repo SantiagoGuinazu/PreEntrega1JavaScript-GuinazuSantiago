@@ -1,4 +1,4 @@
-//Prueba Live Server
+/*//Prueba Live Server
 console.log("Pre Entrega 1 - Guiñazu Santiago")
 
 //E-commerce: Botingold - Compra y venta de Botines
@@ -11,8 +11,8 @@ let ingreso = Number(prompt("Paso 1 - Ingrese 1 si ya es Usuario o 2 para crear 
 let passwordBD = "santi123"
 let userBD = "santiago"
 
-let password
-let user 
+let password =''
+let user = ''
 
 let intentos = 0
 
@@ -38,7 +38,7 @@ if (ingreso === 1) {
 
 
 // 2) Eleccion de Presupuestos
-alert("Paso 2 - Elegir el precio de su Botin en pesos")
+alert("Paso 2 - Elegir el presupuesto de su Botin en pesos")
 
 let presupuesto = Number(prompt("Ingrese su presupuesto en pesos"))
 
@@ -53,9 +53,21 @@ if ((presupuesto >= 0)&&(presupuesto<=5000)){
 }
 
 
+// 3) Eleccion del talle de tu BotinGold
+alert("Paso 3 - Elegi tu Talle del BotinGold")
 
-// 3) Sumatoria de Articulos elegidos - "Suponiendo que elige 1 o mas articulos"
-alert("Paso 3 - Sumamos los articulos elegidos (Maximo 3 articulos por pedido)")
+let talle;
+
+do { 
+    talle = prompt("Ingrese entre 38 y 44")
+} while (talle < 38 || talle > 44);
+
+alert("El talle seleccionado es:"+" "+talle)
+
+
+
+// 4) Sumatoria de Articulos elegidos - "Suponiendo que elige 1 o mas articulos"
+alert("Paso 4 - Sumamos los articulos elegidos (Maximo 3 articulos por pedido)")
 
 
 let articulo1 = Number(prompt("Ingrese precio del primer articulo"))
@@ -69,14 +81,11 @@ function sumar(articulo1, articulo2, articulo3) {
     return resultado
 }
 alert("La sumatoria de sus articulos elegidos es:"+" "+ sumar(articulo1, articulo2, articulo3))
-
 console.log(precioFinal)
 
 
-
-// 4) Descuento - "Descuentos 20% o 30%"
-
-alert("Si tiene un codigo de Descuento ingreselo")
+// 5) Descuento - "Descuentos 20% o 30%"
+alert("Paso 5 - Si tiene un codigo de Descuento ingreselo")
 
 let codigoBD20 = "descuento20"
 let codigoBD30 = "descuento30"
@@ -91,5 +100,4 @@ if (descuento == codigoBD20) {
     alert("El precio final con descuento del 30% incluido es:"+" "+descuento30)
 } else {
     alert("Codigo ingresado Incorrecto")
-}
-
+}*/
