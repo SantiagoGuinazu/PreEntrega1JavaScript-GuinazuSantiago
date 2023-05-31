@@ -1,4 +1,4 @@
-/*//Prueba Live Server
+//Prueba Live Server
 console.log("Pre Entrega 1 - Guiñazu Santiago")
 
 //E-commerce: Botingold - Compra y venta de Botines
@@ -100,4 +100,4 @@ if (descuento == codigoBD20) {
     alert("El precio final con descuento del 30% incluido es:"+" "+descuento30)
 } else {
     alert("Codigo ingresado Incorrecto")
-}*/
+}
