@@ -11,12 +11,15 @@ let ingreso = Number(prompt("Paso 1 - Ingrese 1 si ya es Usuario o 2 para crear 
 let passwordBD = "santi123"
 let userBD = "santiago"
 
-let password =''
-let user = ''
+let password = ""
+let user = ""
 
 let intentos = 0
 
-if (ingreso === 1) {
+while (ingreso != 1 && ingreso != 2) {
+    alert("Numero Incorrecto - 1 si ya es Usuario o 2 para Nuevo Usuario")
+    ingreso = Number(prompt("Ingrese 1 o 2"))
+} if (ingreso === 1) {
     do {
         user = prompt("Ingrese Usuario")
         password = prompt("Ingrese contraseña")
@@ -65,7 +68,6 @@ do {
 alert("El talle seleccionado es:"+" "+talle)
 
 
-
 // 4) Sumatoria de Articulos elegidos - "Suponiendo que elige 1 o mas articulos"
 alert("Paso 4 - Sumamos los articulos elegidos (Maximo 3 articulos por pedido)")
 
@@ -76,11 +78,11 @@ let articulo3 = Number(prompt("Ingrese precio del tercer articulo"))
 let precioFinal = sumar(articulo1, articulo2, articulo3, "+")
 
 function sumar(articulo1, articulo2, articulo3) {
-    let resultado
-    resultado = articulo1 + articulo2 + articulo3
-    return resultado
+    let precioFinal
+    precioFinal = articulo1 + articulo2 + articulo3
+    return precioFinal
 }
-alert("La sumatoria de sus articulos elegidos es:"+" "+ sumar(articulo1, articulo2, articulo3))
+alert("La sumatoria de sus articulos elegidos es:"+" "+ precioFinal)
 console.log(precioFinal)
 
 
@@ -90,7 +92,7 @@ alert("Paso 5 - Si tiene un codigo de Descuento ingreselo")
 let codigoBD20 = "descuento20"
 let codigoBD30 = "descuento30"
 
-let descuento = prompt("Ingrese codigo de descuento")
+let descuento = prompt("Ingrese codigo de descuento").toLowerCase()
 
 if (descuento == codigoBD20) {
     let descuento20 = (precioFinal-(precioFinal*0.20))
